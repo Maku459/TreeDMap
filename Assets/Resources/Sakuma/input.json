@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "tree_type": "Feature",
+      "properties": {
+        "bloom_date": "",
+        "bloom_30_date": "",
+        "bloom_50_date": "",
+        "bloom_80_date": "",
+        "fall_date": "",
+        "leaf_date": ""
+      },
+      "geometry": {
+        "geometry_type": "Point",
+        "coordinates": [
+          139.6160387992859,
+          35.6829822193051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "bloom_date": "",
+        "bloom_30_date": "",
+        "bloom_50_date": "",
+        "bloom_80_date": "",
+        "fall_date": "",
+        "leaf_date": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.61633920669553,
+          35.68291686000201
+        ]
+      }
+    }
+  ]
+}
