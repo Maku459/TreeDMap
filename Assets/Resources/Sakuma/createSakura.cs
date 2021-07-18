@@ -36,29 +36,39 @@ public class createSakura : MonoBehaviour
         string inputString = Resources.Load<TextAsset>("Sakuma/input").ToString();
         // 上で作成したクラスへデシリアライズ
         InputJson inputJson = JsonUtility.FromJson<InputJson>(inputString);
-
-        DateTime start_date = DateTime.Parse(inputJson.features[0].bloom_date);
         var dt = new DateTime( 2021, 3, 10);
 
-        if (start_date.AddDays(10) < dt) {
-            sakura = sakura_lowpoly_6;
-        }else if (start_date.AddDays(8) < dt)
+        for (int i = 0; i < 2; i++)
         {
-            sakura = sakura_lowpoly_5;
-        }else if (start_date.AddDays(6) < dt)
-        {
-            sakura = sakura_lowpoly_4;
-        }else if (start_date.AddDays(4) < dt)
-        {
-            sakura = sakura_lowpoly_3;
-        }else if (start_date.AddDays(2) < dt)
-        {
-            sakura = sakura_lowpoly_2;
-        }else{
-            sakura = sakura_lowpoly_1;
-        }
+            DateTime start_date = DateTime.Parse(inputJson.features[i].bloom_date);
 
-        Instantiate(sakura, new Vector3( -1.0f, 0.0f, 0.0f), Quaternion.identity);
+            if (start_date.AddDays(10) < dt)
+            {
+                sakura = sakura_lowpoly_6;
+            }
+            else if (start_date.AddDays(8) < dt)
+            {
+                sakura = sakura_lowpoly_5;
+            }
+            else if (start_date.AddDays(6) < dt)
+            {
+                sakura = sakura_lowpoly_4;
+            }
+            else if (start_date.AddDays(4) < dt)
+            {
+                sakura = sakura_lowpoly_3;
+            }
+            else if (start_date.AddDays(2) < dt)
+            {
+                sakura = sakura_lowpoly_2;
+            }
+            else
+            {
+                sakura = sakura_lowpoly_1;
+            }
+
+            GameObject go = Instantiate(sakura, new Vector3(-1.0f, 0.0f, 0.0f), Quaternion.identity) as GameObject;
+        }
     }
 
     // Update is called once per frame
