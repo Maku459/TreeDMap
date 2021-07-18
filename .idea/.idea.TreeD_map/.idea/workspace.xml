@@ -19,6 +19,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/timeSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.9/Editor/VisualStudioEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -26,8 +27,9 @@
       <option value="$PROJECT_DIR$/Assets/Sakuma/jsontest.cs" />
       <option value="$PROJECT_DIR$/Assets/Sakuma/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/createSakura.cs" />
-      <option value="$PROJECT_DIR$/Assets/Resources/Sakuma/input.json" />
       <option value="$PROJECT_DIR$/Assets/Resources/Sakuma/createSakura.cs" />
+      <option value="$PROJECT_DIR$/Assets/timeSlider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Resources/Sakuma/input.json" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vRk6miYVpSeNS6XZPwxo8FrwoP" />
@@ -72,7 +74,7 @@
       <updated>1626532119712</updated>
       <workItem from="1626532141898" duration="1037000" />
       <workItem from="1626533609568" duration="7173000" />
-      <workItem from="1626555145030" duration="14049000" />
+      <workItem from="1626555145030" duration="15738000" />
     </task>
     <servers />
   </component>
