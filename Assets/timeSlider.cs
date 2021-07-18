@@ -13,16 +13,17 @@ public class timeSlider : MonoBehaviour
     {
 
         Slider = GetComponent<Slider>();
- 
+
         int maxSlide = 10;
         int nowSlide = 0;
+        int minSlide = -10;
 
         //スライダーの最大値の設定
         Slider.maxValue = maxSlide;
+        Slider.minValue = minSlide;
  
         //スライダーの現在値の設定
         Slider.value = nowSlide;
- 
         
     }
 
