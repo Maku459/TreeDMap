@@ -245,6 +245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260bcf8cb7a7b8d48ae8966cc6bb6555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sakura_lowpoly_1: {fileID: 919132149155446097, guid: c590bed94b3312d44b50b117e06214f6, type: 3}
+  sakura_lowpoly_2: {fileID: 0}
+  sakura_lowpoly_3: {fileID: 0}
+  sakura_lowpoly_4: {fileID: 0}
+  sakura_lowpoly_5: {fileID: 0}
+  sakura_lowpoly_6: {fileID: 0}
+  sakura: {fileID: 0}
 --- !u!4 &1667408714
 Transform:
   m_ObjectHideFlags: 0

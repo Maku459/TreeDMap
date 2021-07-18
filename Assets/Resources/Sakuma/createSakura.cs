@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 // 入力されるJSONに合わせてクラスを作成
 [Serializable]
@@ -13,22 +14,21 @@ public class InputJson
 [Serializable]
 public class JsonObject
 {
-    public string tree_type;
-
-    public string geometry_type;
-    public float[] coordinates;
+    public int id;
+    public string bloom_date;
 }
 
 public class createSakura : MonoBehaviour
 {
-    /*
-    public Mesh noodle1;
-    public Mesh noodle2;
-    public Mesh noodle3;
-    public Mesh noodle4;
-    */
+    [SerializeField] public GameObject sakura_lowpoly_1;
+    [SerializeField] public GameObject sakura_lowpoly_2;
+    [SerializeField] public GameObject sakura_lowpoly_3;
+    [SerializeField] public GameObject sakura_lowpoly_4;
+    [SerializeField] public GameObject sakura_lowpoly_5;
+    [SerializeField] public GameObject sakura_lowpoly_6;
 
-    private GameObject[] _sakura;
+    public GameObject sakura;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +36,29 @@ public class createSakura : MonoBehaviour
         string inputString = Resources.Load<TextAsset>("Sakuma/input").ToString();
         // 上で作成したクラスへデシリアライズ
         InputJson inputJson = JsonUtility.FromJson<InputJson>(inputString);
-        Debug.Log(inputJson.features[0].tree_type);
-        /*
-        if (!inputJson.leaf_date){
-            
+
+        DateTime start_date = DateTime.Parse(inputJson.features[0].bloom_date);
+        var dt = new DateTime( 2021, 3, 10);
+
+        if (start_date.AddDays(10) < dt) {
+            sakura = sakura_lowpoly_6;
+        }else if (start_date.AddDays(8) < dt)
+        {
+            sakura = sakura_lowpoly_5;
+        }else if (start_date.AddDays(6) < dt)
+        {
+            sakura = sakura_lowpoly_4;
+        }else if (start_date.AddDays(4) < dt)
+        {
+            sakura = sakura_lowpoly_3;
+        }else if (start_date.AddDays(2) < dt)
+        {
+            sakura = sakura_lowpoly_2;
+        }else{
+            sakura = sakura_lowpoly_1;
         }
-        
-        Instantiate(originObject, new Vector3( -1.0f, 0.0f, 0.0f), Quaternion.identity);
-        */
+
+        Instantiate(sakura, new Vector3( -1.0f, 0.0f, 0.0f), Quaternion.identity);
     }
 
     // Update is called once per frame
