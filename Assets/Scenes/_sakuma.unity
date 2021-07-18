@@ -246,11 +246,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sakura_lowpoly_1: {fileID: 919132149155446097, guid: c590bed94b3312d44b50b117e06214f6, type: 3}
-  sakura_lowpoly_2: {fileID: 0}
-  sakura_lowpoly_3: {fileID: 0}
-  sakura_lowpoly_4: {fileID: 0}
-  sakura_lowpoly_5: {fileID: 0}
-  sakura_lowpoly_6: {fileID: 0}
+  sakura_lowpoly_2: {fileID: 919132149155446097, guid: 1bb943c4020e377448a2a4fc25dfb59d, type: 3}
+  sakura_lowpoly_3: {fileID: 919132149155446097, guid: 622f6a97e71aa3d448a869d982738160, type: 3}
+  sakura_lowpoly_4: {fileID: 919132149155446097, guid: dc7005eb15bda044789bcbaa38131fe8, type: 3}
+  sakura_lowpoly_5: {fileID: 919132149155446097, guid: 62632386125368545b640bd80e40e023, type: 3}
+  sakura_lowpoly_6: {fileID: 919132149155446097, guid: fbd311363c794524a93f4eae58c1ec33, type: 3}
   sakura: {fileID: 0}
 --- !u!4 &1667408714
 Transform:

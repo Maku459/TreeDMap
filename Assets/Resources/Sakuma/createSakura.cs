@@ -16,6 +16,7 @@ public class JsonObject
 {
     public int id;
     public string bloom_date;
+    public float[] coordinates;
 }
 
 public class createSakura : MonoBehaviour
@@ -36,9 +37,9 @@ public class createSakura : MonoBehaviour
         string inputString = Resources.Load<TextAsset>("Sakuma/input").ToString();
         // 上で作成したクラスへデシリアライズ
         InputJson inputJson = JsonUtility.FromJson<InputJson>(inputString);
-        var dt = new DateTime( 2021, 3, 10);
+        var dt = new DateTime( 2021, 3, 16);
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 10; i++)
         {
             DateTime start_date = DateTime.Parse(inputJson.features[i].bloom_date);
 
@@ -67,7 +68,10 @@ public class createSakura : MonoBehaviour
                 sakura = sakura_lowpoly_1;
             }
 
-            GameObject go = Instantiate(sakura, new Vector3(-1.0f, 0.0f, 0.0f), Quaternion.identity) as GameObject;
+            float x = inputJson.features[i].coordinates[0];
+            float z = inputJson.features[i].coordinates[1];
+
+            GameObject go = Instantiate(sakura, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         }
     }
 
